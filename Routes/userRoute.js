@@ -10,6 +10,7 @@ const { userModel } = require("../Models/userModel");
 require("dotenv").config();
 
 userRouter.post("/signup", async (req, res) => {
+     
     const { password, email, confirm_password } = req.body;
     try {
         const user = await userModel.findOne({ email });
